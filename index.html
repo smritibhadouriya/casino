@@ -379,4 +379,415 @@
                 <h3 class="text-2xl font-semibold mb-4">Lucky Sevens Slot</h3>
                 <div class="flex justify-center space-x-4 mb-6">
                     <div class="bg-gray-800 rounded-lg p-4 text-4xl">🍒</div>
-                    <div class="bg-gray-800 rounded-lg p-4 text-4xl">🍋</
+                    <div class="bg-gray-800 rounded-lg p-4 text-4xl">🍋</div>
+                    <div class="bg-gray-800 rounded-lg p-4 text-4xl">🔔</div>
+                </div>
+                <button id="spinBtn" onclick="spinSlot()" class="btn-primary mb-4">SPIN (Free Play)</button>
+                <div id="slotResult" class="text-lg font-semibold"></div>
+            </div>
+            <button class="btn-primary">Play for Real Money</button>
+        </div>
+    </section>
+
+    <!-- Casino Comparison Tool -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-yellow-400">⚖️ Casino Comparison Tool</h2>
+            <div class="card p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Select Casino 1</label>
+                        <select id="casino1" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white">
+                            <option value="royal">Royal Casino</option>
+                            <option value="diamond">Diamond Palace</option>
+                            <option value="lucky">Lucky Strike</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Select Casino 2</label>
+                        <select id="casino2" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white">
+                            <option value="diamond">Diamond Palace</option>
+                            <option value="royal">Royal Casino</option>
+                            <option value="lucky">Lucky Strike</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button onclick="compareCasinos()" class="btn-primary w-full">Compare Now</button>
+                    </div>
+                </div>
+                <div id="comparisonResult" class="hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="border-b border-gray-600">
+                                    <th class="py-3 px-4">Feature</th>
+                                    <th class="py-3 px-4" id="casino1Name">Casino 1</th>
+                                    <th class="py-3 px-4" id="casino2Name">Casino 2</th>
+                                </tr>
+                            </thead>
+                            <tbody id="comparisonTable"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Section -->
+    <section id="guides" class="py-16 bg-gray-900 bg-opacity-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-yellow-400">📚 Guides & Learning Hub</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card p-6">
+                    <div class="text-4xl mb-4">♠️</div>
+                    <h3 class="text-lg font-semibold mb-2">How to Play Poker</h3>
+                    <p class="text-gray-200 mb-4">Complete guide from beginner to pro level</p>
+                    <button class="text-yellow-400 hover:text-yellow-300 font-semibold">Read More →</button>
+                </div>
+                
+                <div class="card p-6">
+                    <div class="text-4xl mb-4">🎰</div>
+                    <h3 class="text-lg font-semibold mb-2">Slot Strategies</h3>
+                    <p class="text-gray-200 mb-4">Proven strategies that actually work</p>
+                    <button class="text-yellow-400 hover:text-yellow-300 font-semibold">Read More →</button>
+                </div>
+                
+                <div class="card p-6">
+                    <div class="text-4xl mb-4">🎲</div>
+                    <h3 class="text-lg font-semibold mb-2">Roulette Basics</h3>
+                    <p class="text-gray-200 mb-4">Master the wheel with our comprehensive guide</p>
+                    <button class="text-yellow-400 hover:text-yellow-300 font-semibold">Read More →</button>
+                </div>
+                
+                <div class="card p-6">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="text-lg font-semibold mb-2">Casino Safety Tips</h3>
+                    <p class="text-gray-200 mb-4">Stay safe while gambling online</p>
+                    <button class="text-yellow-400 hover:text-yellow-300 font-semibold">Read More →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Reviews -->
+    <section id="reviews" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-yellow-400">💬 What Players Are Saying</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card p-6">
+                    <div class="star-rating text-lg mb-3">★★★★★</div>
+                    <p class="text-gray-200 mb-4">"Amazing bonuses and fast payouts. Been playing here for 2 years!"</p>
+                    <div class="font-semibold">- Rajesh K.</div>
+                </div>
+                
+                <div class="card p-6">
+                    <div class="star-rating text-lg mb-3">★★★★☆</div>
+                    <p class="text-gray-200 mb-4">"Great game selection and customer support is very helpful."</p>
+                    <div class="font-semibold">- Priya S.</div>
+                </div>
+                
+                <div class="card p-6">
+                    <div class="star-rating text-lg mb-3">★★★★★</div>
+                    <p class="text-gray-200 mb-4">"Won ₹50,000 on slots! Withdrawal was processed in 24 hours."</p>
+                    <div class="font-semibold">- Amit M.</div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <button onclick="openReviewModal()" class="btn-primary">Write Your Review</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-900 bg-opacity-40">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-yellow-400">❓ Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="card rounded-xl">
+                    <button onclick="toggleFAQ(1)" class="w-full text-left p-6 font-semibold text-lg flex justify-between items-center">
+                        How do I find a safe online casino?
+                        <span id="faq1-icon">+</span>
+                    </button>
+                    <div id="faq1" class="hidden px-6 pb-6 text-gray-200">
+                        Look for proper licensing, SSL encryption, positive reviews, and responsible gambling features. Always check our verified casino list for the safest options.
+                    </div>
+                </div>
+                
+                <div class="card rounded-xl">
+                    <button onclick="toggleFAQ(2)" class="w-full text-left p-6 font-semibold text-lg flex justify-between items-center">
+                        What bonuses are best for beginners?
+                        <span id="faq2-icon">+</span>
+                    </button>
+                    <div id="faq2" class="hidden px-6 pb-6 text-gray-200">
+                        No deposit bonuses and free spins are perfect for beginners. They let you try games without risking your own money while learning the ropes.
+                    </div>
+                </div>
+                
+                <div class="card rounded-xl">
+                    <button onclick="toggleFAQ(3)" class="w-full text-left p-6 font-semibold text-lg flex justify-between items-center">
+                        Is gambling legal in India?
+                        <span id="faq3-icon">+</span>
+                    </button>
+                    <div id="faq3" class="hidden px-6 pb-6 text-gray-200">
+                        Online gambling laws vary by state in India. Some states allow it while others restrict it. Always check your local laws before playing.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="card p-8 text-center border-2 border-yellow-400">
+                <h2 class="text-2xl font-bold mb-4 text-yellow-400">📧 Get Exclusive Casino Deals</h2>
+                <p class="text-gray-200 mb-6">Subscribe to receive the latest bonuses, promotions, and casino news directly in your inbox.</p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="flex-1 bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white">
+                    <button class="btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 bg-opacity-60 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-yellow-400 mb-4">🎰 Casino Guru</div>
+                    <p class="text-gray-200">Your trusted guide to the best online casinos. Play responsibly.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-200">
+                        <li><a href="#casinos" class="hover:text-yellow-400">Top Casinos</a></li>
+                        <li><a href="#bonuses" class="hover:text-yellow-400">Best Bonuses</a></li>
+                        <li><a href="#games" class="hover:text-yellow-400">Casino Games</a></li>
+                        <li><a href="#guides" class="hover:text-yellow-400">Guides</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-200">
+                        <li><a href="#" class="hover:text-yellow-400">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Responsible Gambling</h3>
+                    <ul class="space-y-2 text-gray-200">
+                        <li><a href="#" class="hover:text-yellow-400">Gambling Addiction Help</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Self-Assessment Tool</a></li>
+                        <li><a href="#" class="hover:text-yellow-400">Set Limits</a></li>
+                        <li class="text-sm">Helpline: 1800-XXX-XXXX</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-200">
+                <p>&copy; 2025 Casino Guru. All rights reserved. Gamble responsibly. 18+</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+        <div class="card rounded-xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-semibold mb-6 text-yellow-400">Write a Review</h3>
+            <form>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Casino Name</label>
+                    <select class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 text-white">
+                        <option>Royal Casino</option>
+                        <option>Diamond Palace</option>
+                        <option>Lucky Strike</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium mb-2">Rating</label>
+                    <div class="flex space-x-2">
+                        <button type="button" onclick="setRating(1)" class="star-btn text-2xl text-gray-400 hover:text-yellow-400">★</button>
+                        <button type="button" onclick="setRating(2)" class="star-btn text-2xl text-gray-400 hover:text-yellow-400">★</button>
+                        <button type="button" onclick="setRating(3)" class="star-btn text-2xl text-gray-400 hover:text-yellow-400">★</button>
+                        <button type="button" onclick="setRating(4)" class="star-btn text-2xl text-gray-400 hover:text-yellow-400">★</button>
+                        <button type="button" onclick="setRating(5)" class="star-btn text-2xl text-gray-400 hover:text-yellow-400">★</button>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium mb-2">Your Review</label>
+                    <textarea class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 h-24 text-white" placeholder="Share your experience..."></textarea>
+                </div>
+                <div class="flex space-x-4">
+                    <button type="button" onclick="closeReviewModal()" class="flex-1 bg-gray-600 hover:bg-gray-500 text-white font-semibold py-2 px-4 rounded-lg">
+                        Cancel
+                    </button>
+                    <button type="submit" class="flex-1 btn-primary">Submit Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Filter casinos
+        function filterCasinos(type) {
+            const buttons = document.querySelectorAll('.btn-secondary');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-yellow-500', 'text-gray-900');
+                btn.classList.add('bg-transparent', 'border-yellow-500', 'text-yellow-500');
+            });
+            
+            event.target.classList.remove('bg-transparent', 'border-yellow-500', 'text-yellow-500');
+            event.target.classList.add('bg-yellow-500', 'text-gray-900');
+            
+            scrollToSection('casinos');
+        }
+
+        // Game selection
+        function selectGame(gameType) {
+            alert(`Redirecting to ${gameType} games page...`);
+        }
+
+        // Slot machine demo
+        function spinSlot() {
+            const symbols = ['🍒', '🍋', '🔔', '💎', '⭐', '🍀'];
+            const reels = document.querySelectorAll('.bg-gray-800');
+            const result = document.getElementById('slotResult');
+            const spinBtn = document.getElementById('spinBtn');
+            
+            spinBtn.disabled = true;
+            spinBtn.textContent = 'SPINNING...';
+            
+            let spins = 0;
+            const spinInterval = setInterval(() => {
+                reels.forEach(reel => {
+                    reel.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+                });
+                spins++;
+                
+                if (spins > 20) {
+                    clearInterval(spinInterval);
+                    
+                    const finalSymbols = [];
+                    reels.forEach(reel => {
+                        const symbol = symbols[Math.floor(Math.random() * symbols.length)];
+                        reel.textContent = symbol;
+                        finalSymbols.push(symbol);
+                    });
+                    
+                    if (finalSymbols[0] === finalSymbols[1] && finalSymbols[1] === finalSymbols[2]) {
+                        result.textContent = '🎉 JACKPOT! You won! 🎉';
+                        result.className = 'text-lg font-semibold text-yellow-400';
+                    } else if (finalSymbols[0] === finalSymbols[1] || finalSymbols[1] === finalSymbols[2]) {
+                        result.textContent = '✨ Small win! ✨';
+                        result.className = 'text-lg font-semibold text-green-400';
+                    } else {
+                        result.textContent = 'Try again!';
+                        result.className = 'text-lg font-semibold text-gray-200';
+                    }
+                    
+                    spinBtn.disabled = false;
+                    spinBtn.textContent = 'SPIN (Free Play)';
+                }
+            }, 100);
+        }
+
+        // Casino comparison
+        function compareCasinos() {
+            const casino1 = document.getElementById('casino1').value;
+            const casino2 = document.getElementById('casino2').value;
+            
+            const casinoData = {
+                royal: { name: 'Royal Casino', bonus: '₹50,000', rating: '4.8/5', speed: '24 hours', games: '2000+', mobile: 'Yes' },
+                diamond: { name: 'Diamond Palace', bonus: '₹75,000', rating: '4.9/5', speed: '12 hours', games: '1500+', mobile: 'Yes' },
+                lucky: { name: 'Lucky Strike', bonus: '₹40,000', rating: '4.7/5', speed: '48 hours', games: '1200+', mobile: 'Yes' }
+            };
+            
+            document.getElementById('casino1Name').textContent = casinoData[casino1].name;
+            document.getElementById('casino2Name').textContent = casinoData[casino2].name;
+            
+            const tableHTML = `
+                <tr class="border-b border-gray-600">
+                    <td class="py-3 px-4">Welcome Bonus</td>
+                    <td class="py-3 px-4 text-yellow-400">${casinoData[casino1].bonus}</td>
+                    <td class="py-3 px-4 text-yellow-400">${casinoData[casino2].bonus}</td>
+                </tr>
+                <tr class="border-b border-gray-600">
+                    <td class="py-3 px-4">User Rating</td>
+                    <td class="py-3 px-4">${casinoData[casino1].rating}</td>
+                    <td class="py-3 px-4">${casinoData[casino2].rating}</td>
+                </tr>
+                <tr class="border-b border-gray-600">
+                    <td class="py-3 px-4">Payout Speed</td>
+                    <td class="py-3 px-4">${casinoData[casino1].speed}</td>
+                    <td class="py-3 px-4">${casinoData[casino2].speed}</td>
+                </tr>
+                <tr class="border-b border-gray-600">
+                    <td class="py-3 px-4">Game Selection</td>
+                    <td class="py-3 px-4">${casinoData[casino1].games}</td>
+                    <td class="py-3 px-4">${casinoData[casino2].games}</td>
+                </tr>
+                <tr>
+                    <td class="py-3 px-4">Mobile Support</td>
+                    <td class="py-3 px-4 text-green-400">${casinoData[casino1].mobile}</td>
+                    <td class="py-3 px-4 text-green-400">${casinoData[casino2].mobile}</td>
+                </tr>
+            `;
+            
+            document.getElementById('comparisonTable').innerHTML = tableHTML;
+            document.getElementById('comparisonResult').classList.remove('hidden');
+        }
+
+        // FAQ toggle
+        function toggleFAQ(num) {
+            const faq = document.getElementById(`faq${num}`);
+            const icon = document.getElementById(`faq${num}-icon`);
+            
+            if (faq.classList.contains('hidden')) {
+                faq.classList.remove('hidden');
+                icon.textContent = '−';
+            } else {
+                faq.classList.add('hidden');
+                icon.textContent = '+';
+            }
+        }
+
+        // Review modal
+        function openReviewModal() {
+            document.getElementById('reviewModal').classList.remove('hidden');
+        }
+
+        function closeReviewModal() {
+            document.getElementById('reviewModal').classList.add('hidden');
+        }
+
+        function setRating(rating) {
+            const stars = document.querySelectorAll('.star-btn');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.remove('text-gray-400');
+                    star.classList.add('text-yellow-400');
+                } else {
+                    star.classList.remove('text-yellow-400');
+                    star.classList.add('text-gray-400');
+                }
+            });
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('reviewModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeReviewModal();
+            }
+        });
+    </script>
+</body>
+</html>
